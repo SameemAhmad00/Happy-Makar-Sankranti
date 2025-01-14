@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #1a91ff, #87CEFA);
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.festival-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.festival-text h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    animation: textFloat 3s ease-in-out infinite;
+}
+
+.festival-text p {
+    font-size: 1.5em;
+    animation: textFloat 3s ease-in-out infinite 0.5s;
+}
+
+.kite {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+.kite-shape {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.kite-body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px solid #333;
+}
+
+/* Adding the stick and curve */
+.kite-body:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    width: 141%;
+    border-top: 2px solid #333;
+    transform: rotate(45deg);
+}
+
+.kite-body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 100%;
+    border-left: 2px solid #333;
+    border-top: 2px solid #333;
+}
+
+.kite-string {
+    position: absolute;
+    width: 1px;
+    height: 300px;
+    background: #fff;
+    bottom: -310px;
+    left: 50%;
+    transform-origin: top;
+    animation: stringWave 3s ease-in-out infinite;
+}
+
+.tail-bow {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+@keyframes kiteFloat1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(30px, -20px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(60px, 0) rotate(5deg);
+    }
+
+    75% {
+        transform: translate(30px, 20px) rotate(2deg);
+    }
+}
+
+@keyframes stringWave {
+
+    0%,
+    100% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+}
+
+
+.kite1 {
+    top: 20%;
+    left: 20%;
+    animation: kiteFloat1 15s ease-in-out infinite;
+}
+
+.kite2 {
+    top: 30%;
+    right: 25%;
+    animation: kiteFloat1 12s ease-in-out infinite reverse;
+}
+
+.kite3 {
+    bottom: 30%;
+    left: 35%;
+    animation: kiteFloat1 10s ease-in-out infinite;
+}
+
+.kite1 .kite-body {
+    background: linear-gradient(45deg, #FF6B6B, #ff8585);
+}
+
+.kite2 .kite-body {
+    background: linear-gradient(45deg, #4ECDC4, #6ee6de);
+}
+
+.kite3 .kite-body {
+    background: linear-gradient(45deg, #FFD93D, #ffe066);
+}
+
+
+    .bottom-button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .bottom-button a {
+        text-decoration: none;
+    }
+
+    .bottom-button button {
+        background: #FF6B6B;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .bottom-button button:hover {
+        background: #FF4D4D;
+        transform: scale(1.1);
+    }
+
+    .bottom-button button:active {
+        transform: scale(1);
+    }
+    
+footer{
+  background-color: #007bff; 
+  color: #fff; 
+  text-align: center; 
+  padding: 10px 0;
+  position: sticky;
+  top: 100%;
+}
